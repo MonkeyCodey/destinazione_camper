@@ -1,0 +1,102 @@
+{% extends 'company/base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<h2 class="header">OFFERTE DEL MOMENTO</h2>
+
+{% for camper in campers %}
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-12">
+        <a href="{% url 'shop:detail' camper.id %}"><h2>{{ camper.titolo }}</h2></a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="row">
+          <img class="images-layout img-fluid" src="{{ camper.immagine_principale.url }}" alt="Immagine al momento non disponibile">
+       </div>
+      </div>
+
+<div class="col-sm-6 r-column-style my-col">
+
+  {% if camper.prezzo %}
+  <div class="row specs-row my-row">
+    <div class="col-sm-6"><h3 class="my-auto bold-text">Prezzo €: </h3></div>
+    <div class="col-sm-6"><h3 class="my-auto">{{ camper.prezzo }}</h3></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.modello %}
+  <div class="row specs-row my-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Modello: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.modello }}</p></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.marca %}
+  <div class="row specs-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Marca: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.marca }}</p></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.anno %}
+  <div class="row specs-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Anno: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.anno }}</p></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.chilometraggio %}
+  <div class="row specs-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Chilometraggio: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.chilometraggio }}</p></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.motore %}
+  <div class="row specs-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Motore: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.motore }}</p></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.carburante %}
+  <div class="row specs-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Carburante: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.carburante }}</p></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.cambio %}
+  <div class="row specs-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Cambio: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.cambio }}</p></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.classe %}
+  <div class="row specs-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Classe: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.classe }}</p></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.posti_letto %}
+  <div class="row specs-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Posti Letto: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.posti_letto }}</p></div></div>
+  {% else %} {% endif %}
+
+  {% if camper.posti_omologati %}
+  <div class="row specs-row">
+    <div class="col-sm-6"><p class="my-auto bold-text">Posti Omologati: </p></div>
+    <div class="col-sm-6"><p class="my-auto">{{ camper.posti_omologati }}</p></div></div>
+  {% else %} {% endif %}
+
+      </div>
+    </div>
+   </div>
+
+{% endfor %}
+<br>
+
+{% endblock %}

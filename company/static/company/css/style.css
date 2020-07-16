@@ -1,0 +1,97 @@
+@font-face {
+  font-family: gagalin;
+  src: url(/static/company/fonts/Gagalin-Regular.otf);
+}
+/* change the background color, the font size and the padding*/
+.navbar-custom {
+    background-color: #044700;
+    font-size: 20px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+/* change the brand color,font, size and height */
+.navbar-custom .navbar-brand{
+    color:#f6ec68;
+    font-family: gagalin, arial, sans-serif;
+    font-size: 30px;
+    /*    font-height: 40px;  */
+}
+/* change the text color */
+.navbar-custom .navbar-text {
+    color: #ffffff;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: #ffffff;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item:hover .nav-link{
+    color: #f6ec68;
+}
+
+.active {
+  color: #f6ec68 !important;
+  background-color: #0fad05;
+}
+
+
+/* indie flower font */
+.indie {
+  font-family: 'Indie Flower', cursive;
+}
+.header {
+  min-width:100%; min-height:100%; width:auto; height:auto;
+  width: auto;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+}
+.englishgreen {
+  color: #044700;
+}
+/* To have an image going from side to side, just below the navbar, without being part of the navbar,
+give it some custom css, like the two classes that follow. */
+.full-width-image {
+   width: 100vw;
+   position: relative;
+   left: 50%;
+   margin-left: -50vw;
+}
+.full-width-image img {
+  width: 100%;
+}
+
+/* LINK COLORS */
+/* unvisited link */
+a:link {
+ color: #044700;
+}
+/* visited link */
+a:visited {
+ color: #044700;
+}
+/* mouse over link */
+a:hover {
+ color: #0fad05;
+ text-decoration: none;
+}
+/* selected link */
+a:active {
+ color: #f6ec68;
+}
+
+/* Footer styling */
+.footer-bg-col {
+  background-color: #d4d9d2;
+  padding: 10px 0;
+  border: 0;
+  text-align: center;
+}

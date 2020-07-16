@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+
+
+  <head>
+
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Monkey Custom -->
+    <link rel="stylesheet" type="text/css" href="{% static 'company/css/style.css' %}">
+
+
+    {% block extrahead %}{% endblock %}
+
+    <title>DestinazioneCamper</title>
+    <link rel="shortcut icon" href="{% static "company/images/favicon.ico"  %}" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/css/detailGrid.css' %}">
+
+
+  </head>
+
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark navbar-custom">
+      <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static "company/images/logo.svg" %}" width="30" height="30" alt=""> DESTINAZIONE CAMPER
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav ml-auto navbar-custom">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'shop:shop' %}">OFFERTE</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">CHI SIAMO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'contacts' %}">CONTATTACI</a>
+          </li>
+      </ul>
+    </div>
+
+  </nav>
+
+
+<!-- Add an image full width right after the navbar -->
+    <div class="container-fluid">
+      <div class="row">
+      <img src="{% static 'company/images/colomount.jpg' %}" class="full-width-image">
+      </div>
+    </div>
+
+
+<!-- Add a block for the other templates -->
+    <div class="container">
+      {% block content %}{% endblock %}
+    </div>
+
+
+
+    <!-- Footer -->
+    <footer class="page-footer font-small pt-4 footer-bg-col">
+
+      <!-- Footer Links -->
+      <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+          <!-- Grid column -->
+          <div class="col-sm-7 mt-md-0 mt-3">
+
+            <!-- Content -->
+
+            <img src="{% static "company/images/descamp_logo.png" %}" width="140" height="140" padding-left="150" alt="">
+
+          </div>
+          <!-- Grid column -->
+
+          <hr class="clearfix w-100 d-md-none pb-3">
+
+          <!-- Grid column -->
+          <div class="col-sm-5 mb-md-0 mb-3">
+            <br>
+
+            <!-- Links -->
+            <h5 class="text-uppercase" style="color: #044700;">contatti</h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="#!">telefono: 111.111.1111</a>
+              </li>
+              <li>
+                <a href="#!">telefono alternativo: 222.222.2222</a>
+              </li>
+              <li>
+                <a href="#!">email:destinazionecamper@gmail.com</a>
+              </li>
+
+            </ul>
+
+          </div>
+          <!-- Grid column -->
+
+
+
+        </div>
+        <!-- Grid row -->
+
+      </div>
+      <!-- Footer Links -->
+
+      <!-- Copyright (Optional)
+ #     <div class="footer-copyright text-center py-3">© 2020 Copyright:
+          <a href="https://mdbootstrap.com/"> Destinazione Camper Srl</a>
+      </div>
+       Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  </body>
+</html>

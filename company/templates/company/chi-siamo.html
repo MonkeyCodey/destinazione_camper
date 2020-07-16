@@ -1,0 +1,57 @@
+
+
+{% extends 'company/base.html' %}
+
+
+{% block content %}
+
+{% load static %}
+
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-7 text-right">
+      <h3 class="indie">
+        Troviamo camper con un passato <br>per restituirgli il vigore del presente <br>e riportarli a solcare le strade <br>
+        permettendoti di guidare<br>verso avventure indimenticabili. <br> <br>
+        <span>"La natura non è un posto da visitare. <br>E' casa nostra." <br> (Gary Snyder)</span>
+      </h3>
+    </div>
+
+    <div class="col-5">
+      <img src="{% static 'company/images/photo01.png' %}"height="300">
+    </div>
+
+  </div>
+</div>
+
+<br><br>
+
+<div class="container">
+  <div class="">
+    Siamo una piccola compagnia che gira per l'Europa alla ricerca camper usati in buono stato per rimetterli su
+    e reinserirli sul mercato a prezzi accessibili a tutti.<br>
+    La nostra filosofia e' quella di risparmiare sui costi di gestione aziendale (salone espositivo, personale amministrativo,
+    pubblicita', vasto parco mezzi...) per mantenere basso il prezzo del prodotto finito, pur offrendo un mezzo completamente revisionato e risistemato.<br>
+    Il nostro prodotto e' pensato per coloro che vogliano avvicinarsi al meraviglioso mondo dei camper,
+    o che desiderino un piccolo upgrade senza pero' incorrere in esosi o lunghi impegni.<br>
+    Contattaci se vuoi saperne di piu' sulla nostra offerta del momento o se vuoi vendere il tuo camper usato.<br><br>
+    Ti ricordiamo inoltre che un camper ti consente di godere della bellezza della natura nel rispetto della normativa anti-Covid19.
+
+  </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% endblock %}

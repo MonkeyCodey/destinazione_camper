@@ -1,0 +1,284 @@
+{% extends 'company/base.html' %}
+{% load static %}
+
+{% block extrahead %}
+<!-- CSS files for the grid and the lightbox -->
+    <link rel="stylesheet" type="text/css" href="{% static 'shop/css/lightbox.css' %}">
+{% endblock %}
+
+{% block content %}
+<br><br>
+
+<!-- Starting grid -->
+ <div class="container-fluid">
+<!-- Starting row 1 (title) -->
+ <div class="row">
+   <div class="col-12 title-format">
+      <h2><b>{{ camper.titolo}}</b></h2>
+   </div>
+ <!-- Ending row 1-->
+ </div>
+
+
+  <!-- Starting row 2 (main image)-->
+  <div class="row">
+  <!-- Starting left column of row 2 (All Images)-->
+    <div class="col-sm-6">
+  <!-- Starting nested rows of left column -->
+  <!-- Row 1 for main image -->
+      <div class="row">
+        <img class="images-layout img-fluid hover-shadow" src="{{ camper.immagine_principale.url }}" alt="Immagine al momento non disponibile" onclick="openModal();currentSlide(1)">
+      </div>
+
+  <!-- LIGHTBOX -->
+
+  <!-- Rows for lightbox -->
+
+  <!-- Images used to open the lightbox -->
+     <div class="row lb-row lb-padding">
+       {% if camper.immagine_principale %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_principale.url }}" onclick="openModal();currentSlide(1)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+       {% if camper.immagine_02 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_02.url }}" onclick="openModal();currentSlide(2)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+       {% if camper.immagine_03 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_03.url }}" onclick="openModal();currentSlide(3)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+     </div>
+
+      <div class="row lb-row lb-padding">
+        {% if camper.immagine_04 %}
+        <div class="lb-column">
+          <img src="{{ camper.immagine_04.url }}" onclick="openModal();currentSlide(4)" class="hover-shadow img-fluid">
+        </div>{% else %} {% endif %}
+        {% if camper.immagine_05 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_05.url }}" onclick="openModal();currentSlide(5)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+       {% if camper.immagine_06 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_06.url }}" onclick="openModal();currentSlide(6)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+     </div>
+
+     <div class="row lb-row lb-padding">
+       {% if camper.immagine_07 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_07.url }}" onclick="openModal();currentSlide(7)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+       {% if camper.immagine_08 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_08.url }}" onclick="openModal();currentSlide(8)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+       {% if camper.immagine_09 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_09.url }}" onclick="openModal();currentSlide(9)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+     </div>
+
+     <div class="row lb-row lb-padding">
+       {% if camper.immagine_10 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_10.url }}" onclick="openModal();currentSlide(10)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+       {% if camper.immagine_11 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_11.url }}" onclick="openModal();currentSlide(11)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+       {% if camper.immagine_12 %}
+       <div class="lb-column">
+         <img src="{{ camper.immagine_12.url }}" onclick="openModal();currentSlide(12)" class="hover-shadow img-fluid">
+       </div>{% else %} {% endif %}
+     </div>
+
+
+     <!-- The Modal/Lightbox -->
+     <div id="myModal" class="modal">
+       <span class="close" onclick="closeModal()">&times;</span>
+       <div class="modal-content">
+
+         {% if camper.immagine_principale %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_principale.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_02 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_02.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_03 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_03.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_04 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_04.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_05 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_05.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_06 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_06.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_07 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_07.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_08 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_08.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_09 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_09.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_10 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_10.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_11 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_11.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+         {% if camper.immagine_12 %}
+         <div class="mySlides">
+           <img src="{{ camper.immagine_12.url }}" class="image-attributes">
+         </div>{% else %} {% endif %}
+
+
+         <!-- Next/previous controls -->
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+       </div>
+     </div>
+
+  <!-- Ending nested rows of left column -->
+     </div>
+  <!-- Ending left column of row 2-->
+
+
+  <!-- Starting right column of row 2 (specs grid)-->
+  <div class="col-sm-6 r-column-style my-col">
+    <!-- Starting nested rows of right column -->
+
+      {% if camper.prezzo %}
+      <div class="row specs-row my-row">
+        <div class="col-sm-6"><h3 class="my-auto bold-text">Prezzo €: </h3></div>
+        <div class="col-sm-6"><h3 class="my-auto">{{ camper.prezzo }}</h3></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.modello %}
+      <div class="row specs-row my-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Modello: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.modello }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.marca %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Marca: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.marca }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.anno %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Anno: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.anno }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.chilometraggio %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Chilometraggio: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.chilometraggio }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.motore %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Motore: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.motore }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.carburante %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Carburante: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.carburante }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.cambio %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Cambio: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.cambio }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.classe %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Classe: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.classe }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.colore %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Colore: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.colore }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.lunghezza %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Lunghezza (cm): </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.lunghezza }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.larghezza %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Larghezza (cm): </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.larghezza }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.altezza %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Altezza (cm): </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.altezza }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.posti_letto %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Posti Letto: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.posti_letto }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.posti_omologati %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Posti Omologati: </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.posti_omologati }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.peso_a_pieno_carico %}
+      <div class="row specs-row">
+        <div class="col-sm-6"><p class="my-auto bold-text">Peso a Pieno Carico (kg): </p></div>
+        <div class="col-sm-6"><p class="my-auto">{{ camper.peso_a_pieno_carico }}</p></div></div>
+      {% else %} {% endif %}
+
+      {% if camper.descrizione %}
+      <div class="row specs-row">
+        <div class="col-sm-12"><p class="my-auto"><b>DESCRIZIONE:</b> <br>{{ camper.descrizione }}</p></div></div>
+      {% else %} {% endif %}
+
+
+  <!-- Ending nested rows of right column -->
+   </div>
+  <!-- Ending right column of row 2-->
+  </div>
+  <!-- Ending row 2 -->
+ </div>
+  <!-- Ending grid -->
+</div>
+
+    <script type="text/javascript" src="{% static 'shop/js/lightbox.js' %}"></script>
+
+{% endblock %}
